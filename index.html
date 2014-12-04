@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>GitCE by gitceprojects</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>GitCE</h1>
+        <h2>A tool for extracting git merge conflicts</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/gitceprojects/GitCE/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/gitceprojects/GitCE/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/gitceprojects/GitCE" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="gitce" class="anchor" href="#gitce" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitCE</h1>
+
+<p>GitCE is a groovy project that uses Gremlin Graph Traversal language to query a Neo4j database 
+which contains metadata about project repositories hosted at GitHub. It takes as input the directory 
+path to the graph database and outputs a list of all the merge commits that happened in the database
+history. Each item of this list contains the merge commit SHA-1 and their parents SHA-1. 
+The output list is structured in the following manner:</p>
+
+<p>MergeCommit1, Parent1, Parent2</p>
+
+<p>...</p>
+
+<p>MergeCommitN, Parent1, Parent2</p>
+
+<p>Currently, the project saves the output list in a .csv file.
+To run this project, you need the following instructions:</p>
+
+<p>1- Clone and run Gitminer (<a href="https://github.com/pridkett/gitminer">https://github.com/pridkett/gitminer</a>), according with their instructions to 
+download the database containing the desired projects metadata. </p>
+
+<p>2- Once you have the graph.db folder in your computer, clone or download the GitCE project</p>
+
+<p>3- Run 'mvn eclipse:clean' to download the project's dependencies. </p>
+
+<p>4- Import the project into eclipse using "Import &gt; Maven &gt; Existing project into workspace..."  </p>
+
+<p>5- In projects.csv put details about projects that you want to analyse.</p>
+
+<p>6- Run App.groovy, you may chose between some running options in this file. A .csv file will be created in the directory where you cloned the GitCE project.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
